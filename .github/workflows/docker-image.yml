@@ -22,7 +22,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Login to ECR
-        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/r6d3k2f6
+      run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/r6d3k2f6
 
     - name: Build, tag and push the Docker image
       run: |
